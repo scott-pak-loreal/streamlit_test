@@ -1,10 +1,9 @@
 import streamlit as st
 import pandas as pd
-import openpyxl
 
 # Cache the data loading for performance
 def load_data():
-    return pd.read_excel('streamlit_testdata.xlsx')
+    return pd.read_excel('streamlit_testdata.xlsx', engine='openpyxl')
 
 # Main application
 def main():
